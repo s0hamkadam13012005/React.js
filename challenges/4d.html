@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+    <style>
+        button{
+            background-color: rgb(0,123,255);
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 6px;
+            margin:5px 3px;
+        }
+
+        .js-container{
+            max-width: 700px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .email,.password{
+            margin:10px 0px
+        }
+    </style>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+    
+     function App(){
+
+        const [showPassword , setShowPassword] = React.useState(false);
+
+        function handlePassword()  {
+
+            if(showPassword){
+                setShowPassword(false);
+            }
+            else{
+                setShowPassword(true);
+            }
+        }
+
+        return(
+            <>
+                <div className="email">
+                <input/>
+                    </div>
+
+                      <div className="password">
+                <input 
+                type={showPassword ? 'text' 
+                                   :  'password'
+                        }/>
+
+                <button onClick={handlePassword}>{showPassword? 'show' : "hide"}</button>
+                    </div>
+               
+                    <div>
+                        <button className="login">Login</button>
+                        <button className="signup">Signup</button>
+                        </div>
+
+             </>
+             
+        )
+     }
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(<App/>);
+    </script>
+  </body>
+</html>
