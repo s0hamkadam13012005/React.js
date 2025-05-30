@@ -4,6 +4,7 @@ export function OrdersPage() {
     return (
         <>
             <title>Orders</title>
+ <link rel="icon" type="image/svg+xml" href="orders-favicon.png" />
 
         <Header/>
 
@@ -26,7 +27,7 @@ export function OrdersPage() {
                 </div>
 
                 <div className="right-section">
-                    <a className="orders-link header-link" href="/orders">
+                    <a className="orders-link header-link active" href="/orders">
 
                         <span className="orders-text">Orders</span>
                     </a>
