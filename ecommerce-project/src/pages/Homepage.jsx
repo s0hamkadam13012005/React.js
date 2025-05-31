@@ -1,7 +1,16 @@
 import './HomePage.css';
 import { products } from '../../starting-code/data/products';
 import { Header } from '../components/header';
+
+import axios from 'axios';
+
 export function HomePage() {
+
+     axios.get('http://localhost:3000/api/products')
+        .then((response)=>{
+            console.log(response.data);
+        })
+    
     return (
         <>
             <title>Home-Page</title>
