@@ -3,14 +3,20 @@ import { products } from '../../starting-code/data/products';
 import { Header } from '../components/header';
 
 import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 export function HomePage() {
+    
+    const [products, setProducts] = useState([]);
 
+     useEffect(()=>{
      axios.get('http://localhost:3000/api/products')
         .then((response)=>{
-            console.log(response.data);
+            setProducts(response.data);
         })
-    
+    },[]);
+
+
     return (
         <>
             <title>Home-Page</title>
