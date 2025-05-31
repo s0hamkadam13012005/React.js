@@ -2,7 +2,7 @@ import { CheckoutHeader } from './CheckoutHeader';
 import './CheckoutPage.css';
 
 
-export function CheckoutPage() {
+export function CheckoutPage({cart}) {
     return (
         <>
         <title>Checkout</title>
