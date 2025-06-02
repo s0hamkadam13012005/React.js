@@ -11,14 +11,15 @@ function App() {
    const [cart, setCart] = useState([]);
 
     useEffect(() => {
-  console.log('Running useEffect');
-  axios.get('/api/cart-items?expand=product')
-    .then((response) => {
+      const fetchAppdata = async () =>{
+
+    
+      const response = await axios.get('/api/cart-items?expand=product')
       setCart(response.data);
-    })
-    .catch((err) => {
-      console.error('Fetch error:', err.message);
-    });
+    
+  }
+
+  fetchAppdata();
 }, []);
 
   return (
