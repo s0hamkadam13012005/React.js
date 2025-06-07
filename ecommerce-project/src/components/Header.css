@@ -1,5 +1,5 @@
 .header {
-  background-color: rgb(8, 79, 45);
+  background-color: rgb(0, 0, 102); 
   color: white;
   padding-left: 15px;
   padding-right: 15px;
@@ -18,6 +18,32 @@
 .header .left-section {
   width: 208px;
 }
+
+.home-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.home-logo {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+}
+
+
+.header-link {
+  text-decoration: none;
+}
+
+.header-link:hover .home-link {
+  text-decoration: underline;
+}
+
 
 @media (max-width: 800px) {
   .header .left-section {
@@ -81,7 +107,7 @@
 }
 
 .header .search-button {
-  background-color: rgb(186, 255, 190);
+  background-color:  rgb(151, 151, 208); 
   border: none;
   width: 45px;
   height: 40px;

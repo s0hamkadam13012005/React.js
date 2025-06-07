@@ -1,3 +1,11 @@
+.home-link {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px 10px;
+  color: rgb(33, 33, 33);
+  text-decoration: none;
+}
+
 .tracking-page {
   max-width: 850px;
   margin-top: 90px;

@@ -26,13 +26,21 @@
   width: 200px;
 }
 
-.checkout-header .logo {
-  height: 26px;
-  margin-top: 0px;
+.checkout-home-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(0, 0, 102); /* Navy blue text for visibility */
+  text-decoration: none;
 }
 
-.checkout-header .mobile-logo {
-  display: none;
+
+.home-logo {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* @media is used to create responsive design (making the
@@ -67,7 +75,7 @@
 }
 
 .checkout-header .return-to-home-link {
-  color: rgb(25, 135, 84);
+  color: rgb(0, 0, 102); 
 
   text-decoration: none;
   cursor: pointer;
